@@ -19,7 +19,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/Islam-Ragab015/dominoes_score_calc.git
+git clone https://github.com/Islam-Ragab015/dominoes_score.git
 Navigate to the project directory:
 
 bash
