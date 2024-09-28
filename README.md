@@ -43,24 +43,17 @@ Usage
 
 Once the app is running:
 
-Enter custom team names if desired.
 
-Input scores for Team A and Team B.
+    Enter custom team names if desired.
 
-Tap "Add Score" to update the team's score.
+    Input scores for Team A and Team B.
 
-Use the "Undo" button to revert the last score for a team.
+    Tap "Add Score" to update the team's score.
 
-Tap "Reset Scores" to clear all scores and start fresh.
+    Use the "Undo" button to revert the last score for a team.
 
+    Tap "Reset Scores" to clear all scores and start fresh.
 
-Code Structure
-
-ScoreboardPage: The main widget where all the score-tracking logic resides.
-
-Contains methods to add scores, undo the last score, and reset all scores.
-
-Uses TextEditingController to handle team names and score inputs.
 
 
 Contributing
