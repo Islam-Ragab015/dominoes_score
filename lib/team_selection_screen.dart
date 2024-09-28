@@ -109,7 +109,7 @@ class _ScoreboardPageState extends State<ScoreboardPage> {
     );
   }
 
-  Widget _teamScoreCard(String teamName, int score, int rounds, bool isTeamA) {
+  Widget _teamScoreCard(int score) {
     return Expanded(
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 5),
@@ -138,18 +138,9 @@ class _ScoreboardPageState extends State<ScoreboardPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              teamName,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 5),
-            Text(
               'Score: $score',
               style: const TextStyle(
-                color: Colors.blueGrey,
+                color: Colors.blue,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -165,7 +156,7 @@ class _ScoreboardPageState extends State<ScoreboardPage> {
       margin: const EdgeInsets.symmetric(horizontal: 5),
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.1),
+        // color: Colors.white.withOpacity(0.1),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -287,7 +278,7 @@ class _ScoreboardPageState extends State<ScoreboardPage> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: const Text('Dominoes Score Calculator'),
+        title: const Text('Dominoes Score'),
         backgroundColor: Colors.tealAccent.shade400,
         centerTitle: true,
         actions: [
@@ -326,10 +317,8 @@ class _ScoreboardPageState extends State<ScoreboardPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _teamScoreCard(
-                    _teamNameControllerA.text, teamAScore, teamARounds, true),
-                _teamScoreCard(
-                    _teamNameControllerB.text, teamBScore, teamBRounds, false),
+                _teamScoreCard(teamAScore), // Removed team name
+                _teamScoreCard(teamBScore), // Removed team name
               ],
             ),
             const SizedBox(height: 10),

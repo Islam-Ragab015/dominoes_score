@@ -22,60 +22,55 @@ class HistoryPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Team A Scores:',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.tealAccent,
-              ),
-            ),
-            ListView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: teamAHistory.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title:
-                      Text('Round ${index + 1}: ${teamAHistory[index].first}'),
-                  tileColor: Colors.tealAccent.shade100,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  contentPadding: const EdgeInsets.all(10),
-                  trailing: const Icon(Icons.check_circle, color: Colors.green),
-                );
-              },
-            ),
+            _buildScoreSection('Team A Scores:', teamAHistory),
             const SizedBox(height: 20),
-            const Text(
-              'Team B Scores:',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.tealAccent,
-              ),
-            ),
-            ListView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: teamBHistory.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title:
-                      Text('Round ${index + 1}: ${teamBHistory[index].first}'),
-                  tileColor: Colors.tealAccent.shade100,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  contentPadding: const EdgeInsets.all(10),
-                  trailing: const Icon(Icons.check_circle, color: Colors.green),
-                );
-              },
-            ),
+            _buildScoreSection('Team B Scores:', teamBHistory),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildScoreSection(String title, List<List<int>> history) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.tealAccent,
+          ),
+        ),
+        const SizedBox(height: 10),
+        ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: history.length,
+          itemBuilder: (context, index) {
+            return Card(
+              margin: const EdgeInsets.symmetric(vertical: 5),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              elevation: 4,
+              child: ListTile(
+                title: Text(
+                  'Round ${index + 1}: ${history[index].first}',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                tileColor: Colors.tealAccent.shade100,
+                contentPadding: const EdgeInsets.all(10),
+                trailing: const Icon(Icons.check_circle, color: Colors.green),
+              ),
+            );
+          },
+        ),
+      ],
     );
   }
 }
