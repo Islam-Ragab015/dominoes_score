@@ -1,4 +1,4 @@
-Dominoes Score Calculator 
+dominoes score
 
 A simple Flutter application that allows you to keep track of scores for two teams in a dominoes game. It includes features for adding scores, undoing the last score, renaming teams, and resetting all scores.
 
