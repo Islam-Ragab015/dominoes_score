@@ -1,7 +1,6 @@
 import 'package:dominoes_score_calc/team_selection_screen.dart';
 import 'package:flutter/material.dart';
 
-// Splash screen widget
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -19,8 +18,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.extension,
-                size: 100, color: Colors.teal), // App logo placeholder
+            Icon(Icons.extension, size: 100, color: Colors.teal),
             SizedBox(height: 20),
             CircularProgressIndicator(),
           ],
