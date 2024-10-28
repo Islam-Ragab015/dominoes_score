@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:dominoes_score_calc/history_page.dart';
 
-class ScoreboardPage extends StatefulWidget {
-  const ScoreboardPage({super.key});
+class ScoreBoardPage extends StatefulWidget {
+  const ScoreBoardPage({super.key});
 
   @override
-  _ScoreboardPageState createState() => _ScoreboardPageState();
+  _ScoreBoardPageState createState() => _ScoreBoardPageState();
 }
 
-class _ScoreboardPageState extends State<ScoreboardPage> {
+class _ScoreBoardPageState extends State<ScoreBoardPage> {
   int teamAScore = 0;
   int teamBScore = 0;
   int teamARounds = 0;
