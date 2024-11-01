@@ -1,9 +1,9 @@
-dominoes score
+# dominoes score
 
 A simple Flutter application that allows you to keep track of scores for two teams in a dominoes game. It includes features for adding scores, undoing the last score, renaming teams, and resetting all scores.
 
 
-Features
+## Features
 
 Team Name Customization: Rename Team A and Team B to match the teams you're tracking.
 Add Scores: Input and add scores for both teams.
@@ -11,8 +11,12 @@ Undo Last Score: Easily undo the last score added for both teams.
 Score Reset: Reset the scores for both teams at any time.
 Dark Mode UI: The app features a dark-themed interface with teal accents for a modern look.
 
-Steps to run the app:
 
+## ⭐️ If you find this project useful, please give it a star! ⭐️
+Your support helps me to keep improving and maintaining this project. Thank you!
+
+
+## Steps to run the app:
 
 Clone the repository:
 
@@ -39,7 +43,7 @@ bash
     flutter run
 
     
-Usage
+## Usage
 
 Once the app is running:
 
@@ -56,11 +60,11 @@ Once the app is running:
 
 
 
-Contributing
+## Contributing
 
 Contributions are welcome! If you have any ideas, feel free to open an issue or submit a pull request.
 
 
-Contact
+## Contact
 
 If you have any questions or feedback, feel free to reach out to me at islaminreallife@gmail.com.
